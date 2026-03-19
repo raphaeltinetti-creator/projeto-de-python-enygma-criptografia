@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>ENYGMA | Desafio ADS</title>
+    <style>
+        body { background: #000; color: #0f0; font-family: 'Courier New', monospace; text-align: center; padding: 50px; }
+        .painel { border: 2px solid #0f0; padding: 30px; display: inline-block; background: #050505; max-width: 600px; }
+        input { background: #000; border: 1px solid #0f0; color: #0f0; padding: 10px; margin: 10px; width: 250px; outline: none; }
+        button { background: #00ff88; color: #000; border: none; padding: 10px 25px; cursor: pointer; font-weight: bold; }
+        .erro { color: #ff4444; margin: 15px 0; }
+        .sucesso { color: #00ffff; margin-bottom: 20px; }
+        hr { border: 0; border-top: 1px solid #0f0; margin: 20px 0; }
+    </style>
+</head>
+<body>
+    <div class="painel">
+        <h1>--- ENYGMA SYSTEM ---</h1>
+        <p>Decifre: 01010111...01001011</p>
+        <hr>
+
+        {% if etapa == "venceu" %}
+            <h2 class="sucesso">{{ resultado }}</h2>
+            <a href="/" style="color: #0f0;">[ REINICIAR ]</a>
+        {% else %}
+            {% if resultado %}<div class="sucesso">{{ resultado }}</div>{% endif %}
+            {% if erro %}<div class="erro">{{ erro }}</div>{% endif %}
+
+            <form method="POST">
+                <input type="hidden" name="etapa" value="{{ etapa }}">
+                
+                {% if etapa == "inicio" %}
+                    <p>Qual a 1ª cifra? (Binário, César ou Atbash)</p>
+                {% elif etapa == "fase2" %}
+                    <p>Qual a próxima cifra?</p>
+                {% elif etapa == "fase3" %}
+                    <p>Qual a última cifra?</p>
+                {% elif etapa == "final" %}
+                    <p>Deseja traduzir? (sim/não)</p>
+                {% endif %}
+
+                <input type="text" name="resposta" autofocus required autocomplete="off">
+                <br>
+                <button type="submit">Enviar</button>
+            </form>
+        {% endif %}
+    </div>
+</body>
+</html>
