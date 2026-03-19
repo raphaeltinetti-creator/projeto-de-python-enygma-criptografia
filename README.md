@@ -4,6 +4,13 @@ O **Enygma** é uma aplicação web interativa desenvolvida para testar conhecim
 
 Este projeto foi desenvolvido como parte dos meus estudos em **Análise e Desenvolvimento de Sistemas (ADS)**, focando na integração de Back-end (Python/Flask) com Front-end (HTML/CSS) e auxílio do Gemini.
 
+VScode- app.py
+
+pip install flask
+
+python app.py
+
+Acessar http://127.0.0.1:5000
 ---
 
 ## 🚀 Tecnologias Utilizadas
