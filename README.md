@@ -2,7 +2,7 @@
 
 O **Enygma** é uma aplicação web interativa desenvolvida para testar conhecimentos em lógica de programação e cifras clássicas. O usuário deve decifrar uma sequência binária passando por três camadas de proteção: **Binário**, **Atbash** e **Cifra de César**.
 
-Este projeto foi desenvolvido como parte dos meus estudos em **Análise e Desenvolvimento de Sistemas (ADS)**, focando na integração de Back-end (Python/Flask) com Front-end (HTML/CSS) e auxílio do Gemini.
+Este projeto foi desenvolvido como parte dos meus estudos em **Análise e Desenvolvimento de Sistemas (ADS)**, focando na integração de Back-end (Python/Flask) com Front-end (HTML/CSS) e auxílio de Inteligências Artificiais.
 
 VScode- app.py
 
